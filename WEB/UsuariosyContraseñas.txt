@@ -1,0 +1,7 @@
+Usuarios Admin:
+Email:coronelflorencia116@gmail.com
+Contraseña:admin11
+
+Usuarios Cliente:
+Email:llopiulisesalan10@gmail.com
+Contraseña:admin23
