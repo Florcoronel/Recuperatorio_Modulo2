@@ -1,0 +1,43 @@
+ERROR - 2023-09-29 21:49:57 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tecnopanda', 3306, '', 0)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\primer_proyecto\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\primer_proyecto\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\primer_proyecto\app\Controllers\login_controller.php(27): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(919): App\Controllers\login_controller->auth()
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login_controller))
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\primer_proyecto\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\primer_proyecto\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\primer_proyecto\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\primer_proyecto\app\Controllers\login_controller.php(27): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(919): App\Controllers\login_controller->auth()
+#7 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login_controller))
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\primer_proyecto\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-09-29 21:49:57 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\login_controller.php(27): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\login_controller->auth()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
